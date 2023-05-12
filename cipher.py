@@ -134,4 +134,4 @@ if __name__ == "__main__":
 4.	
 
 """
-#to jest moja zmiana
+#ride or die
