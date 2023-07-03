@@ -10,6 +10,6 @@ class Menu:
 
 
 
-    print(START_MENU) #opcja nr 1
+    print(START_MENU) #option nr 1
 
-Menu.show_some_info()       #opcja nr2
+Menu.show_some_info()       #option nr2
