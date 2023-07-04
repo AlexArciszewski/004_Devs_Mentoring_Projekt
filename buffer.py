@@ -1,80 +1,139 @@
 """
 
-Buffer czyli taka lista, która sobie istnieje podczas działania programu, Trzyma zaszyfrowane, odszyfrowane
-    wczytane z pliku, z niego zapisujemy do pliku.
-
+Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowane, odszyfrowane
+    wczytane z pliku(to w file_handler, z niego zapisujemy do pliku.
 """
-import cipher
-#from cipher import *
-from cipher import coding, decoding
-#from .cipher import coding, decoding
-#import cipher as cr   #cr.nazwa metody
-
-#from cipher import coding
-
-def buffer():
-    return text
 
 
-
-
-
-
-
-
-buffer()
-
-""" 
-
-    def coding(self) -> str:
-        #Converting text to coded_text by moving index of the letter to new index by a jump_key
-
-        coded_text = ""
-        for letter in self.text:
-            letter = letter.lower()
-            if letter == " ":
-                coded_text += letter
-                continue
-
-            index = self.alphabet().find(letter)
-            if index == -1:
-                coded_text += letter
-            else:
-                new_index = index + self.jump_key
-                if new_index >= self.len_letters_collection():
-                    new_index -= self.len_letters_collection()
-                coded_text += self.alphabet()[new_index]
-                print(type(self.alphabet()[new_index]))
-        return coded_text
-
-
-    def decoding(self) -> str:
-        #Converting coded_text to text  by moving index of the letter from new to previous index by a jump_key
-
-        text = ""
-        x = self.coding()
-
-        for letter in x:
-            letter = letter.lower()
-            if letter == " ":
-                pass
-                #x = x + letter
-                #continue
-
-            index = self.alphabet().find(letter)
-            if index == 0:
-                text += letter
-            else:
-                new_index = index - self.jump_key
-                if new_index < 0:
-                    new_index += self.len_letters_collection()
-                text += self.alphabet()[new_index]
-                #print(type(self.alphabet()[new_index]))
-        return text
+class Text:
+    def __init__(self, word, is_coded, code):
+        self.word = 'word'
+        self.is_coded = is_coded
+        self.code = code
+class Buffer:
+# Tu lista obiektów Tworze obiekt klasy Text i appenduję do buffera...z klasy text
+    data: list = []
+    @staticmethod
+    def add(value) -> None:
+        Buffer.data.append(value)
+    @staticmethod
+    def remove(idx: int):
+        """Removes the element with the given idx from the buffer"""
+        if len(Buffer.data) >= idx:
+            di = Buffer.data[idx]
+            del Buffer.data[idx]
+            print(f"Object {di}removed")
+        return Buffer.data
+#Tu lista obiektów...z klasy text
+# print(base_text)
+# coded_text = Code("bcb", 1)
+# print(coded_text.coding())
+#if __name__ == '__main__':
+# base_text = Code("bcb", 1)
+# word = base_text.coding()
+#print(type(word))
+tt = Text('xyz', True, "1")
+Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
+#print(type(Buffer.data))
+# base_text =Code("aaa", 3)
+# word = base_text.coding()
+ss = Text('xyz', True, "3")
+Buffer.add(ss)
+# base_text =Code("ccc", 2)
+# word = base_text.coding()
+uu = Text('xyz', True, "2")
+Buffer.add(uu)
+# print(base_text)
+# print(word)
+#print(Buffer.data)
+#print(Buffer.data.add())
+# print(f"The result is {Buffer.data} ")
+#print(Buffer.data.add())
+print("list", Buffer.data)
+# Buffer.data.remove(2)
+Buffer.remove(2)
+print("list", Buffer.data)
 
 
 
-"""
+
+from cipher import Code
+from dataclasses import dataclass, astuple, asdict
+
+
+@dataclass
+class Text:
+    text: str
+    status: bool
+    rot_type: str
+    #zapis dictów do pliku do Json sprawdzić jak sie to robi
+
+
+# t = Text("bcb", True,"1")  #to chiałem wrzucić do
+# print(t)
+# print(asdict(t))
+
+
+# print("Class Buffer")
+class Buffer:
+# Tu lista obiektów Tworze obiekt klasy Text i appenduję do buffera...z klasy text
+    data: list[Text] = []
+
+
+    @staticmethod
+    def add(value: Text) -> None:
+        Buffer.data.append(value)
+
+    def remove_from_buffer(idx:int):
+        """Removes the element with the given idx from the buffer"""
+
+        if len(Buffer.data) >= idx:
+            di = Buffer.data[idx]
+            del Buffer.data[idx]
+
+            print(f"Object {di}removed")
+        return Buffer.data
+
+
+
+
+#Tu lista obiektów...z klasy text
+
+
+# print(base_text)
+# coded_text = Code("bcb", 1)
+# print(coded_text.coding())
+
+#if __name__ == '__main__':
+base_text = Code("bcb", 1)
+
+word = base_text.coding()
+
+tt = Text(word, True, "1")
+Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
+
+base_text = Code("aaa", 3)
+word = base_text.coding()
+ss = Text(word, True, "3")
+Buffer.add(ss)
+
+base_text = Code("ccc", 2)
+word = base_text.coding()
+uu = Text(word, True, "2")
+Buffer.add(uu)
+
+
+
+print(base_text)
+print(word)
+#print(Buffer.data)
+#print(Buffer.data.add())
+# print(f"The result is {Buffer.data} ")
+#print(Buffer.data.add())
+print("Score", Buffer.data)
+
+Buffer.remove_from_buffer(2)
+print("list", Buffer.data)
 
 
 
