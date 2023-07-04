@@ -14,6 +14,8 @@ Fasada przyjmuje polecenia do:Zapisz plik,odczytaj to File_Handler,zaszyfruj ods
 
 #Tutaj wszystko importujemy to sie ma nazywac manager to jest głowny plik z funkcjami
 
+#Tutaj przejmuje w funkcji od usera rot, wykonac decoding lub encoding(mam tekst lub zmienną),mam obiekt typu tekst i dodaje go do buffeera,
+
 
 #To jest funkcja startująca program...odpalamy ją z pliku main metodę run zaimportuje plik main sluzacy do startu programu.
 # Każda funkcjonalnosc do innego pliku ma iść
