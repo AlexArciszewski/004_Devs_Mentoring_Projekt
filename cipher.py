@@ -70,23 +70,11 @@ class Code:
                 text += letter
             else:
                 new_index = index - self.jump_key
-                if new_index < 0:
+                if new_index == 0:
                     new_index += self.len_letters_collection()
                 text += self.alphabet()[new_index]
-                #print(type(self.alphabet()[new_index]))
-        return text
-
-"""
-1.	zakoduj aby napisać test do zakodowania wciśnij……(tekst idzie do buffer)
-2.	Odkoduj text.
-3. Zapisz Plik
-    3.1 Zapisz caly buffer
-    3.2 Zapisz konkretną częśc buffera. [1-5]
-4. Odczytaj Plik
-5. Wyświetl Buffer. 
-5. Wyjście. 
-
-"""
+                # print(type(self.alphabet()[new_index]))
+        return text # # Text(text, False, self.jump_key)
 
 
 #
