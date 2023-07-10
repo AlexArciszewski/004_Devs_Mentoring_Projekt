@@ -86,14 +86,20 @@ class Buffer:
 
     def remove_from_buffer(idx:int):
         """Removes the element with the given idx from the buffer"""
+        try:
+            if len(Buffer.data) >= idx:
+                di = self.data[idx]
+                del self.data[idx]
+                print(f"Object {di}removed")
+                return self.data
+            else:
+                if len(self.data) < idx:
+                    raise ValueError("There is no idx with that number")
+        except NameError:
+            print("idx must be an integer not a string")
 
-        if len(Buffer.data) >= idx:
-            di = Buffer.data[idx]
-            del Buffer.data[idx]
-
-            print(f"Object {di}removed")
-        return Buffer.data
-
+    def show_buffer(self):
+        print(self.data)
 
 
 
@@ -103,39 +109,39 @@ class Buffer:
 # print(base_text)
 # coded_text = Code("bcb", 1)
 # print(coded_text.coding())
-
-#if __name__ == '__main__':
-base_text = Code("bcb", 1)
-
-word = base_text.coding()
-
-tt = Text(word, True, "1")
-Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
-
-base_text = Code("aaa", 3)
-word = base_text.coding()
-ss = Text(word, True, "3")
-Buffer.add(ss)
-
-base_text = Code("ccc", 2)
-word = base_text.coding()
-uu = Text(word, True, "2")
-Buffer.add(uu)
-
-
-
-print(base_text)
-print(word)
-#print(Buffer.data)
-#print(Buffer.data.add())
-# print(f"The result is {Buffer.data} ")
-#print(Buffer.data.add())
-print("Score", Buffer.data)
-
-Buffer.remove_from_buffer(2)
-print("list", Buffer.data)
-
-
+#
+# #if __name__ == '__main__':
+# base_text = Code("bcb", 1)
+#
+# word = base_text.coding()
+#
+# tt = Text(word, True, "1")
+# Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
+#
+# base_text = Code("aaa", 3)
+# word = base_text.coding()
+# ss = Text(word, True, "3")
+# Buffer.add(ss)
+#
+# base_text = Code("ccc", 2)
+# word = base_text.coding()
+# uu = Text(word, True, "2")
+# Buffer.add(uu)
+#
+#
+#
+# print(base_text)
+# print(word)
+# #print(Buffer.data)
+# #print(Buffer.data.add())
+# # print(f"The result is {Buffer.data} ")
+# #print(Buffer.data.add())
+# print("Score", Buffer.data)
+#
+# Buffer.remove_from_buffer(4)
+# print("list", Buffer.data)
+#
+#
 
 
 

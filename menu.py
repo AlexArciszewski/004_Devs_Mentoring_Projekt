@@ -4,9 +4,12 @@ class Menu:
 
 
     @staticmethod
-    def show_some_info():
+    def show_menu_options():
         """Crude menu text TBD: adding more menu text"""
         print("This is the main menu of cipher program. Please choose the right option to continue: ")
+        print("            1: for text coding")
+        print("            2: for text decoding")
+        print("            3:for save to a file")
+        print("            4:to show the buffer")
 
 
-Menu.show_some_info()

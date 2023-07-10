@@ -28,12 +28,16 @@ class Manager:
 
 
 
-""" 
-
-Kod asci przeskakiwanie. ASCII 33 126 cyfry znaki plus litery...jak znak jest 126 rot 13 to daje literę 46 bo przekroczy 
-126 znak 127 to del i trzeba od poczatku liczyć
-
-"""
 
 
 
+def main():
+
+    test_002 = Manager()
+    #print(f"decoding function {test_001.decoding_text()}")
+    # print(f"coding_text{test_001.coding_text()}")
+    # #test_001.create_list_object(True)
+    #test_002.coding_text()
+    test_002.decoding_text()
+if __name__ == "__main__":
+    main()
