@@ -6,16 +6,25 @@ Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowan
 
 
 class Text:
+
     def __init__(self, word, is_coded, code):
-        self.word = 'word'
+        self.word = word
         self.is_coded = is_coded
         self.code = code
+
+    def __repr__(self) -> str:
+        return f"{self.word} {self.is_coded} {self.code} "
+
+
+
 class Buffer:
 # Tu lista obiektów Tworze obiekt klasy Text i appenduję do buffera...z klasy text
     data: list = []
+
     @staticmethod
     def add(value) -> None:
         Buffer.data.append(value)
+
     @staticmethod
     def remove(idx: int):
         """Removes the element with the given idx from the buffer"""
@@ -24,35 +33,40 @@ class Buffer:
             del Buffer.data[idx]
             print(f"Object {di}removed")
         return Buffer.data
+
+    def __repr__(self):
+        return f"{Buffer.data}"
+
+
 #Tu lista obiektów...z klasy text
 # print(base_text)
 # coded_text = Code("bcb", 1)
 # print(coded_text.coding())
 #if __name__ == '__main__':
-# base_text = Code("bcb", 1)
-# word = base_text.coding()
+#base_text = Code("bcb", 1)
+#word = base_text.coding()
 #print(type(word))
 tt = Text('xyz', True, "1")
 Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
 #print(type(Buffer.data))
-# base_text =Code("aaa", 3)
+#base_text =Code("aaa", 3)
 # word = base_text.coding()
-ss = Text('xyz', True, "3")
+ss = Text('abc', True, "3")
 Buffer.add(ss)
 # base_text =Code("ccc", 2)
 # word = base_text.coding()
-uu = Text('xyz', True, "2")
+uu = Text('def', True, "2")
 Buffer.add(uu)
 # print(base_text)
 # print(word)
-#print(Buffer.data)
+print(Buffer.data)
 #print(Buffer.data.add())
 # print(f"The result is {Buffer.data} ")
 #print(Buffer.data.add())
-print("list", Buffer.data)
+#print("list", Buffer.data)
 # Buffer.data.remove(2)
-Buffer.remove(2)
-print("list", Buffer.data)
+#Buffer.remove(2)
+#print("list", Buffer.data)
 
 
 

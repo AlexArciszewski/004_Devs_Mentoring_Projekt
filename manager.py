@@ -37,7 +37,7 @@ def main():
     #print(f"decoding function {test_001.decoding_text()}")
     # print(f"coding_text{test_001.coding_text()}")
     # #test_001.create_list_object(True)
-    #test_002.coding_text()
-    test_002.decoding_text()
+    test_002.coding_text()
+    #test_002.decoding_text()
 if __name__ == "__main__":
     main()
