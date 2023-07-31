@@ -160,3 +160,20 @@ class Buffer:
 
 
 
+
+def main():
+    buffer = Buffer()
+    text_zzz = Text("aaa", True, "1")
+    text_kkk = Text("bbb", True, "2")
+    #asdict(text_zzz)
+    buffer.add(text_zzz)
+    buffer.add(text_kkk)
+    #print(buffer)
+    #buffer.show_buffer()
+    buffer.data_to_list_of_dicts()
+
+
+
+if __name__ == '__main__':
+    main()
+

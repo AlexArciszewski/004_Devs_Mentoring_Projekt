@@ -70,10 +70,15 @@ class Code:
                 text += letter
             else:
                 new_index = index - self.jump_key
+
                 if new_index == 0:
                     new_index += self.len_letters_collection()
-                text += self.alphabet()[new_index]
+                text += self.alphabet()[new_index - self.jump_key]   #adde selfj.ump_key
                 # print(type(self.alphabet()[new_index]))
+        # print(new_index)
+        # print(self.jump_key)
+        # print(index)
+        # print(self.alphabet()[new_index - self.jump_key])
         return text # # Text(text, False, self.jump_key)
 
 
