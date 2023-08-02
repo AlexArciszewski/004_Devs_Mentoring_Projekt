@@ -16,7 +16,7 @@ class FileHandler:
 
 
     def write_to_a_file(zlota_rybka):
-
+        '''method used to write a list of object to a dict'''
 
 
         data = {
