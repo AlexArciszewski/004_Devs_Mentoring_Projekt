@@ -73,6 +73,7 @@ print(Buffer.data)
 
 from cipher import Code
 from dataclasses import dataclass, astuple, asdict
+#from manager import Manager
 
 
 @dataclass
@@ -115,47 +116,16 @@ class Buffer:
     def show_buffer(self):
         print(self.data)
 
-
-
-#Tu lista obiektów...z klasy text
-
-
-# print(base_text)
-# coded_text = Code("bcb", 1)
-# print(coded_text.coding())
-#
-# #if __name__ == '__main__':
-# base_text = Code("bcb", 1)
-#
-# word = base_text.coding()
-#
-# tt = Text(word, True, "1")
-# Buffer.add(tt)              #add metoda statyczna data atrybut klasy buffer.add
-#
-# base_text = Code("aaa", 3)
-# word = base_text.coding()
-# ss = Text(word, True, "3")
-# Buffer.add(ss)
-#
-# base_text = Code("ccc", 2)
-# word = base_text.coding()
-# uu = Text(word, True, "2")
-# Buffer.add(uu)
-#
-#
-#
-# print(base_text)
-# print(word)
-# #print(Buffer.data)
-# #print(Buffer.data.add())
-# # print(f"The result is {Buffer.data} ")
-# #print(Buffer.data.add())
-# print("Score", Buffer.data)
-#
-# Buffer.remove_from_buffer(4)
-# print("list", Buffer.data)
-#
-#
+    def data_to_list_of_dicts(self):
+        my_list = list[self.data]
+        my_list2 = self.data
+        print(f"{my_list} that's a list of lists of obj's and {my_list2} is a list of obj's")
+        list_of_dicts = []
+        for elements in my_list2:
+            asdict(elements)
+            list_of_dicts.append(asdict(elements))
+            #print(list_of_dicts)
+            return list_of_dicts
 
 
 

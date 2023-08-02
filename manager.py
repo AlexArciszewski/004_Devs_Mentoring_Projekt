@@ -67,7 +67,8 @@ class Manager:
         print(f"The result of decoding the {text2} is: {dec_obj} and {self.buffer}")
 
     def save_to_file(self):
-        FileHandler.write_to_a_file(zlota_rybka=self.buffer.data)
+        list_of_dicts = self.buffer.data_to_list_of_dicts()
+        FileHandler.write_to_a_file(zlota_rybka=list_of_dicts)
 
 
     # def decoding_text(self):  # czy to dodajemy do programu To ma niby tekst odkodowac ale chyba musi być jakaś lokalizacja pliku z zapisaem????
