@@ -16,9 +16,9 @@ class Code:
             # print(chr(i))
             ascii.append(chr(i))
 
-        #print(ascii)
-        asci__string = (''.join(ascii))
-        #print(asci__string)
+        # print(ascii)
+        asci__string = "".join(ascii)
+        # print(asci__string)
         collection == asci__string
         return collection
 
@@ -48,9 +48,8 @@ class Code:
                 if new_index >= self.len_letters_collection():
                     new_index -= self.len_letters_collection()
                 coded_text += self.alphabet()[new_index]
-                print(type(self.alphabet()[new_index]))
-        return coded_text
-
+                # print(type(self.alphabet()[new_index]))
+        return coded_text # Text(coded_text, True, self.jump_key)
 
     def decoding(self) -> str:
         """Converting coded_text to text  by moving index of the letter from new to previous index by a jump_key"""
@@ -62,9 +61,6 @@ class Code:
             letter = letter.lower()
             if letter == " ":
                 pass
-                #x = x + letter
-                #continue
-
             index = self.alphabet().find(letter)
             if index == 0:
                 text += letter
@@ -81,50 +77,9 @@ class Code:
         # print(self.alphabet()[new_index - self.jump_key])
         return text # # Text(text, False, self.jump_key)
 
+code_001 = Code(text="bbb ccc ddd", jump_key=1)
+print(code_001.coding())
+# # print(code_001.alphabet())      #tworzę alfabet nie wiem czy musi więc być on w konstruktorze.....
+# # print(code_001.len_letters_collection()) #wyznaczam długośc alfabetu czyli ile elementów to potrzebne do przejscia jesli skok będzie np 100
+print(code_001.decoding())  #decokduje słowo ale glówne a nie zakodowoane
 
-#
-# def main():
-#     menu_actions = {
-#         '1': {
-#             'name': 'Code a text',
-#             'submenu': {
-#                 '1': encrypt_text
-#                 '2': back_to_menu
-#
-#             }
-#         }
-#     }
-#
-if __name__ == "__main__":
-    code_001 = Code(text="aaa bbb ccc", jump_key=1)
-    print(code_001.coding())
-    # print(code_001.alphabet())      #tworzę alfabet nie wiem czy musi więc być on w konstruktorze.....
-    # print(code_001.len_letters_collection()) #wyznaczam długośc alfabetu czyli ile elementów to potrzebne do przejscia jesli skok będzie np 100
-    print(code_001.decoding())  #decokduje słowo ale gówne a nie zakodowoane
-
-
-""" 
-1.	Zakoduj plik.
-    1.1	aby utworzyć nowy plik wciśnij…
-        1.1.1	podaj nazwę pliku…(program zapisuje nazwę w buffer)
-        1.1.2	aby napisać test do zakodowania wciśnij……(tekst idzie do buffer)
-        1.1.3	aby zapisać i zakodować plik wciśnij……
-        1.1.4	aby usunąć stworzony plik wciśnij…
-        1.1.5	aby wrócić do glównego menu wybierz
-    1.2	aby otworzyć istniejący plik wybierz….
-        1.2.1	aby edytować tekst do zakodowania wciśnij……(tekst idzie do buffer)
-        1.2.2	aby zapisać zakodowany plik wciśnij……
-        1.2.3	aby usunąć stworzony plik wciśnij…
-        1.2.4	aby wrócić do głównego menu wybierz
-
-2.	Odkoduj plik.
-    2.1 wybierz plik (to samo co w 1.2)
-    2.2 aby zapisać odkodowany plik
-    2.2 aby wrócić do menu wybierz
- 
-3.	 Wyjście.
- 
-4.	
-
-"""
-#ride or die

@@ -1,4 +1,4 @@
-from .manager import Manager #importuje namager i run z pliku manager
+from manager import Manager #importuje namager i run z pliku manager
 
 #To jest jedyny main porgramu tzw. finalny main. wszystkob ędzie uruchamiane z tego maina....
 

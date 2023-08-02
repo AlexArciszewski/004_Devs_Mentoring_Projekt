@@ -2,7 +2,6 @@ class Menu:
     """Class connected to the main menu of the cipher program"""
     START_MENU = """This is the main menu of cipher program. Please choose the right option to continue: """
 
-
     @staticmethod
     def show_menu_options():
         """Crude menu text TBD: adding more menu text"""
