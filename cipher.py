@@ -83,3 +83,4 @@ print(code_001.coding())
 # # print(code_001.len_letters_collection()) #wyznaczam długośc alfabetu czyli ile elementów to potrzebne do przejscia jesli skok będzie np 100
 print(code_001.decoding())  #decokduje słowo ale glówne a nie zakodowoane
 
+print(f"For testing...{code_001.alphabet()}")
