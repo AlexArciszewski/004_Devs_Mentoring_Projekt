@@ -1,5 +1,7 @@
 import string
 
+import pytest
+
 
 class Code:
     def __init__(self, text: str, jump_key: int) -> None:
@@ -76,6 +78,9 @@ class Code:
         # print(index)
         # print(self.alphabet()[new_index - self.jump_key])
         return text # # Text(text, False, self.jump_key)
+
+
+
 
 code_001 = Code(text="bbb ccc ddd", jump_key=1)
 print(code_001.coding())
