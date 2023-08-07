@@ -94,7 +94,6 @@ class TestBuffer:
     def test_add_method_buffer(self):
         buffer_obj = Buffer()
 
-        # TEXT OBJ
         assert buffer_obj.data == []
         assert len(buffer_obj.data) == 0
 
