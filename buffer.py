@@ -10,12 +10,16 @@ from dataclasses import dataclass, astuple, asdict
 
 @dataclass
 class Text:
+    """Class used to create object with text, status and rot"""
+
     text: str
     status: bool
     rot_type: str
 
 
 class Buffer:
+    """ Buffer class creates object that keeps Text objects"""
+
     def __init__(self):
         self.data: list[Text] = []
 
@@ -40,6 +44,7 @@ class Buffer:
         print(self.data)
 
     def data_to_list_of_dicts(self):
+        """Method that creates list of objects made from dictionaries"""
         my_list = list[self.data]
         my_list2 = self.data
         print(f"{my_list} that's a list of lists of obj's and {my_list2} is a list of obj's")

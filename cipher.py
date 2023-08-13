@@ -1,9 +1,7 @@
 import string
 
-import pytest
-
-
 class Code:
+    """Class used for creating the coding text"""
     def __init__(self, text: str, jump_key: int) -> None:
         self.text = text
         self.jump_key = jump_key
