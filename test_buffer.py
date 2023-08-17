@@ -2,21 +2,24 @@ from buffer import Buffer, Text
 from cipher import Code
 import pytest
 
+
 class TestBuffer:
     """Class used for tests methods in buffer.py"""
 
 
     def test_default_buffer_data_is_empty(self):
         """Test method to check if the buffer is empty"""
+
         buffer_obj = Buffer()
         assert buffer_obj.data == []
 
     def test_add_method_buffer(self):
         """ Test method for adding data to buffer"""
+
         text = Text("aaa", True, "1")
         buffer_obj = Buffer()
 
-        # TEXT OBJ
+
         assert buffer_obj.data == []
         assert len(buffer_obj.data) == 0
 
@@ -24,7 +27,6 @@ class TestBuffer:
 
         assert buffer_obj.data == [text]
         assert len(buffer_obj.data) == 1
-
 
         text2 = Text("bbb", True, "1")
         buffer_obj.add(text2)

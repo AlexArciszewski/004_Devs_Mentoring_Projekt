@@ -26,13 +26,11 @@ class Code:
         """Creating the int which is a number of chars in a str of letters from def alphabet.
         This string will be used to go round if the jump_key is higher than number of chars
         """
-
         len_collection = len(self.alphabet())
         return len_collection
 
     def coding(self) -> str:
         """Converting text to coded_text by moving index of the letter to new index by a jump_key"""
-
         coded_text = ""
         for letter in self.text:
             letter = letter.lower()
@@ -56,7 +54,6 @@ class Code:
 
         text = ""
         x = self.coding()
-
         for letter in x:
             letter = letter.lower()
             if letter == " ":

@@ -71,6 +71,7 @@ class Manager:
         FileHandler.write_to_a_file(zlota_rybka=list_of_dicts)
 
 
+
     # def decoding_text(self):  # czy to dodajemy do programu To ma niby tekst odkodowac ale chyba musi być jakaś lokalizacja pliku z zapisaem????
     #     """Uncoding text using rot, creating text object Text obj. and adds it to the buffer"""
     #     print("Code the text")

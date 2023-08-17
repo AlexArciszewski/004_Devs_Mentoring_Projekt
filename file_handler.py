@@ -26,6 +26,7 @@ class FileHandler:
 
         with open('json_data.json', 'w') as outfile:
             json.dump(data, outfile)  #data zapisane w postaci klasa,metodastatyczna()-create_json
+            print( {zlota_rybka})
 
 
 
