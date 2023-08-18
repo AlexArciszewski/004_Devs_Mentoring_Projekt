@@ -69,6 +69,7 @@ def main():
     #print(buffer)
     #buffer.show_buffer()
     buffer.data_to_list_of_dicts()
+    print(buffer.data_to_list_of_dicts())
 
 
 
