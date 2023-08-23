@@ -17,12 +17,12 @@ from typing import Callable
 from menu import Menu
 from file_handler import FileHandler
 
-#Tutaj wszystko importujemy to sie ma nazywac manager to jest głowny plik z funkcjami
+# Tutaj wszystko importujemy to sie ma nazywac manager to jest głowny plik z funkcjami
 
-#Tutaj przejmuje w funkcji od usera rot, wykonac decoding lub encoding(mam tekst lub zmienną),mam obiekt typu tekst i dodaje go do buffeera,
+# Tutaj przejmuje w funkcji od usera rot, wykonac decoding lub encoding(mam tekst lub zmienną),mam obiekt typu tekst i dodaje go do buffeera,
 
 
-#To jest funkcja startująca program...odpalamy ją z pliku main metodę run zaimportuje plik main sluzacy do startu programu.
+# To jest funkcja startująca program...odpalamy ją z pliku main metodę run zaimportuje plik main sluzacy do startu programu.
 # Każda funkcjonalnosc do innego pliku ma iść
 class Manager:
     def __init__(self):
@@ -32,17 +32,20 @@ class Manager:
             2: self.decoding_text,
             3: self.save_to_file,
             4: self.buffer.show_buffer,
-
         }
 
     def input_text(self) -> str:
         text = input("please write the text You want to code or decode: ")
         print(f" you chose {text} ")
-        print(f"After giving {text} . Now use input_rot method to input rot of of the text you want to code")
+        print(
+            f"After giving {text} . Now use input_rot method to input rot of of the text you want to code"
+        )
         return text
 
     def input_rot(self) -> int:
-        rot_type = int(input(f"please write the rot_type You want to use on the text given: "))
+        rot_type = int(
+            input(f"please write the rot_type You want to use on the text given: ")
+        )
         print(f"You chose {rot_type}")
         print(f"After giving text the rot you got is: {rot_type}")
         return rot_type
@@ -70,8 +73,6 @@ class Manager:
         list_of_dicts = self.buffer.data_to_list_of_dicts()
         FileHandler.write_to_a_file(zlota_rybka=list_of_dicts)
 
-
-
     # def decoding_text(self):  # czy to dodajemy do programu To ma niby tekst odkodowac ale chyba musi być jakaś lokalizacja pliku z zapisaem????
     #     """Uncoding text using rot, creating text object Text obj. and adds it to the buffer"""
     #     print("Code the text")
@@ -85,4 +86,3 @@ class Manager:
                 self.options.get(user_choice)()
             else:
                 print("The chosen option is invalid")
-
