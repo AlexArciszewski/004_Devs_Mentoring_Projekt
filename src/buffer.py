@@ -5,7 +5,8 @@ Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowan
 """
 from cipher import Code
 from dataclasses import dataclass, astuple, asdict
-#from manager import Manager
+
+# from manager import Manager
 
 
 @dataclass
@@ -18,7 +19,7 @@ class Text:
 
 
 class Buffer:
-    """ Buffer class creates object that keeps Text objects"""
+    """Buffer class creates object that keeps Text objects"""
 
     def __init__(self):
         self.data: list[Text] = []
@@ -47,32 +48,29 @@ class Buffer:
         """Method that creates list of objects made from dictionaries"""
         my_list = list[self.data]
         my_list2 = self.data
-        print(f"{my_list} that's a list of lists of obj's and {my_list2} is a list of obj's")
+        print(
+            f"{my_list} that's a list of lists of obj's and {my_list2} is a list of obj's"
+        )
         list_of_dicts = []
         for elements in my_list2:
             asdict(elements)
             list_of_dicts.append(asdict(elements))
-            #print(list_of_dicts)
+            # print(list_of_dicts)
             return list_of_dicts
-
-
-
 
 
 def main():
     buffer = Buffer()
     text_zzz = Text("aaa", True, "1")
     text_kkk = Text("bbb", True, "2")
-    #asdict(text_zzz)
+    # asdict(text_zzz)
     buffer.add(text_zzz)
     buffer.add(text_kkk)
-    #print(buffer)
-    #buffer.show_buffer()
+    # print(buffer)
+    # buffer.show_buffer()
     buffer.data_to_list_of_dicts()
     print(buffer.data_to_list_of_dicts())
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
