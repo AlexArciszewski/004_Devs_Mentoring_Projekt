@@ -1,6 +1,6 @@
-# from buffer import Buffer, Text
-# from manager import Manager
-# import file_handler
+# from src.buffer import Buffer, Text
+# from src.manager import Manager
+# import src.file_handler
 # import json
 # class TestFileHandler:
 #
