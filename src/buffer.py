@@ -3,9 +3,10 @@
 Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowane, odszyfrowane
     wczytane z pliku(to w file_handler, z niego zapisujemy do pliku.
 """
-from cipher import Code
+from src.cipher import Code
 from dataclasses import dataclass, astuple, asdict
 
+# import sys
 # from manager import Manager
 
 
@@ -57,6 +58,9 @@ class Buffer:
             list_of_dicts.append(asdict(elements))
             # print(list_of_dicts)
             return list_of_dicts
+
+    def exit_the_program(self):
+        exit()
 
 
 def main():
