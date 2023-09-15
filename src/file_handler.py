@@ -24,7 +24,7 @@ class FileHandler:
             )  # data zapisane w postaci klasa,metodastatyczna()-create_json
             print(zlota_rybka)
 
-    # TODO load to buffer / load fiel
+    # TODO load to buffer / load file
 
     def load_from_a_file(zlota_rybka):
         """method used for loading the data from the json file """

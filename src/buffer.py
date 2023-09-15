@@ -1,5 +1,4 @@
 """
-
 Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowane, odszyfrowane
     wczytane z pliku(to w file_handler, z niego zapisujemy do pliku.
 """

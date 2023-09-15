@@ -25,6 +25,7 @@ import buffer
 
 # To jest funkcja startująca program...odpalamy ją z pliku main metodę run zaimportuje plik main sluzacy do startu programu.
 # Każda funkcjonalnosc do innego pliku ma iść
+
 class Manager:
     def __init__(self):
         self.buffer = Buffer()
