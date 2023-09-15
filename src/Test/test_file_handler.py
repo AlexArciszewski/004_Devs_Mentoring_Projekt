@@ -90,4 +90,3 @@ class Test_FileHandler:
         ]
 
         # assert  == {"json 001: ": [{"text": "aaa", "status": True, "rot_type": "1"}, {"text": "bbb", "status": True, "rot_type": "2"}]}
-

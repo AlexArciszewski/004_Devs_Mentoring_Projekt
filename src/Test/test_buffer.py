@@ -6,7 +6,6 @@ import pytest
 class TestBuffer:
     """Class used for tests methods in buffer.py"""
 
-
     def test_default_buffer_data_is_empty(self):
         """Test method to check if the buffer is empty"""
 
@@ -14,7 +13,7 @@ class TestBuffer:
         assert buffer_obj.data == []
 
     def test_add_method_buffer(self):
-        """ Test method for adding data to buffer"""
+        """Test method for adding data to buffer"""
 
         text = Text("aaa", True, "1")
         buffer_obj = Buffer()
@@ -46,5 +45,3 @@ class TestBuffer:
 
         assert buffer_obj.data == [text4]
         assert len(buffer_obj.data) == 1
-
-
