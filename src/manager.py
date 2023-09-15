@@ -35,7 +35,7 @@ class Manager:
             1: self.coding_text,
             2: self.decoding_text,
             3: self.save_data_to_file,
-            4: self.load_from_a_file,
+            #4: self.load_from_a_file,
             5: self.buffer.show_buffer,
             6: self.buffer.exit_the_program,
         }

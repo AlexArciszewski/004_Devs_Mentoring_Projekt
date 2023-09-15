@@ -19,7 +19,6 @@ class TestBuffer:
         text = Text("aaa", True, "1")
         buffer_obj = Buffer()
 
-
         assert buffer_obj.data == []
         assert len(buffer_obj.data) == 0
 
