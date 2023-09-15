@@ -1,5 +1,6 @@
 import string
 
+
 class Code:
     """Class used for creating the coding text"""
 
