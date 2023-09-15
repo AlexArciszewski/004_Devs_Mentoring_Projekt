@@ -2,6 +2,7 @@ import string
 
 class Code:
     """Class used for creating the coding text"""
+
     def __init__(self, text: str, jump_key: int) -> None:
         self.text = text
         self.jump_key = jump_key
@@ -13,13 +14,9 @@ class Code:
         )
         ascii = []
         for i in range(32, 127):
-            # print(chr(i))
             ascii.append(chr(i))
 
-        # print(ascii)
         asci__string = "".join(ascii)
-        # print(asci__string)
-        collection == asci__string
         return collection
 
     def len_letters_collection(self) -> int:
@@ -47,7 +44,7 @@ class Code:
                     new_index -= self.len_letters_collection()
                 coded_text += self.alphabet()[new_index]
                 # print(type(self.alphabet()[new_index]))
-        return coded_text # Text(coded_text, True, self.jump_key)
+        return coded_text  # Text(coded_text, True, self.jump_key)
 
     def decoding(self) -> str:
         """Converting coded_text to text  by moving index of the letter from new to previous index by a jump_key"""
@@ -66,21 +63,19 @@ class Code:
 
                 if new_index == 0:
                     new_index += self.len_letters_collection()
-                text += self.alphabet()[new_index - self.jump_key]   #adde selfj.ump_key
+                text += self.alphabet()[new_index - self.jump_key]  # adde self.jump_key
                 # print(type(self.alphabet()[new_index]))
         # print(new_index)
         # print(self.jump_key)
         # print(index)
         # print(self.alphabet()[new_index - self.jump_key])
-        return text # # Text(text, False, self.jump_key)
-
-
+        return text  # # Text(text, False, self.jump_key)
 
 
 code_001 = Code(text="bbb ccc ddd", jump_key=1)
 print(code_001.coding())
 # # print(code_001.alphabet())      #tworzę alfabet nie wiem czy musi więc być on w konstruktorze.....
 # # print(code_001.len_letters_collection()) #wyznaczam długośc alfabetu czyli ile elementów to potrzebne do przejscia jesli skok będzie np 100
-print(code_001.decoding())  #decokduje słowo ale glówne a nie zakodowoane
+print(code_001.decoding())  # decokduje słowo ale glówne a nie zakodowoane
 
 print(f"For testing...{code_001.alphabet()}")

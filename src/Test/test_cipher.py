@@ -1,7 +1,8 @@
 import string
 import pytest
-from cipher import Code
-
+import sys
+#from cipher import Code
+from src.cipher import Code
 
 class TestCipher:
     """Class used for cipher methods tests"""

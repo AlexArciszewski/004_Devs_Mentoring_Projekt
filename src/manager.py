@@ -16,7 +16,8 @@ from cipher import Code
 from typing import Callable
 from menu import Menu
 from file_handler import FileHandler
-
+import json
+import buffer
 # Tutaj wszystko importujemy to sie ma nazywac manager to jest głowny plik z funkcjami
 
 # Tutaj przejmuje w funkcji od usera rot, wykonac decoding lub encoding(mam tekst lub zmienną),mam obiekt typu tekst i dodaje go do buffeera,
@@ -30,8 +31,10 @@ class Manager:
         self.options: dict[int, Callable] = {
             1: self.coding_text,
             2: self.decoding_text,
-            3: self.save_to_file,
-            4: self.buffer.show_buffer,
+            3: self.save_data_to_file,
+            4: self.load_from_a_file,
+            5: self.buffer.show_buffer,
+            6: self.buffer.exit_the_program
         }
 
     def input_text(self) -> str:
@@ -69,9 +72,12 @@ class Manager:
         self.buffer.add(dec_obj)
         print(f"The result of decoding the {text2} is: {dec_obj} and {self.buffer}")
 
-    def save_to_file(self):
+    def save_data_to_file(self):
         list_of_dicts = self.buffer.data_to_list_of_dicts()
         FileHandler.write_to_a_file(zlota_rybka=list_of_dicts)
+
+
+
 
     # def decoding_text(self):  # czy to dodajemy do programu To ma niby tekst odkodowac ale chyba musi być jakaś lokalizacja pliku z zapisaem????
     #     """Uncoding text using rot, creating text object Text obj. and adds it to the buffer"""

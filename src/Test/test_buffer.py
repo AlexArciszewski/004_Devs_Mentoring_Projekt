@@ -1,5 +1,5 @@
-from buffer import Buffer, Text
-from cipher import Code
+from src.buffer import Buffer, Text
+from src.cipher import Code
 import pytest
 
 
@@ -39,11 +39,10 @@ class TestBuffer:
         text3 = Text("olo", True, "1")
         text4 = Text("ala", True, "1")
         buffer_obj = Buffer()
-        len(buffer_obj.data) == 0
+        assert len(buffer_obj.data) == 0
         buffer_obj.add(text3)
         buffer_obj.add(text4)
-        len(buffer_obj.data) == 2
-        # TEXT OBJ remove el
+        assert len(buffer_obj.data) == 2
         buffer_obj.data.remove(text3)
 
         assert buffer_obj.data == [text4]
