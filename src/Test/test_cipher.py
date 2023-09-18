@@ -29,5 +29,4 @@ class TestCipher:
         assert code.alphabet() == raw_s
 
 
-
 #

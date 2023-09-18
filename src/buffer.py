@@ -61,7 +61,7 @@ class Buffer:
             return list_of_dicts
 
     def exit_the_program(self):
-        """ Method created to exit the program using menu's last position"""
+        """Method created to exit the program using menu's last position"""
         exit()
 
 

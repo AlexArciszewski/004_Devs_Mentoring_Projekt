@@ -74,9 +74,9 @@ class Code:
 
 
 code_001 = Code(text="bbb ccc ddd", jump_key=1)
-#print(code_001.coding())
+# print(code_001.coding())
 # # print(code_001.alphabet())      #tworzę alfabet nie wiem czy musi więc być on w konstruktorze.....
 # # print(code_001.len_letters_collection()) #wyznaczam długośc alfabetu czyli ile elementów to potrzebne do przejscia jesli skok będzie np 100
-#print(code_001.decoding())  # decokduje słowo ale glówne a nie zakodowane
+# print(code_001.decoding())  # decokduje słowo ale glówne a nie zakodowane
 
-#print(f"For testing...{code_001.alphabet()}")
+# print(f"For testing...{code_001.alphabet()}")
