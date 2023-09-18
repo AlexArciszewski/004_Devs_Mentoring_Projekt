@@ -31,6 +31,7 @@ class TestBuffer:
         assert buffer_obj.data == [text, text2]
         assert len(buffer_obj.data) == 2
 
+
     def test_remove_method_buffer(self):
         """Test method for removing data from buffer"""
 

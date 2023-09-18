@@ -16,8 +16,9 @@ from cipher import Code
 from typing import Callable
 from menu import Menu
 from file_handler import FileHandler
+import os.path
 import json
-import buffer
+
 
 # Tutaj wszystko importujemy to sie ma nazywac manager to jest głowny plik z funkcjami
 
@@ -35,7 +36,7 @@ class Manager:
             1: self.coding_text,
             2: self.decoding_text,
             3: self.save_data_to_file,
-            # 4: self.load_from_a_file,
+            4: self.load_file,       #zahashowac gdyby byl problem
             5: self.buffer.show_buffer,
             6: self.buffer.exit_the_program,
         }
@@ -78,6 +79,22 @@ class Manager:
     def save_data_to_file(self):
         list_of_dicts = self.buffer.data_to_list_of_dicts()
         FileHandler.write_to_a_file(zlota_rybka=list_of_dicts)
+
+    def load_file(self):
+        path = input(f" Please give me the name of the file and path you wanna search for: ")
+        FileHandler.load_from_a_file(path, self.buffer)
+        # list_of_dicts_from_file = self.buffer.data_to_list_of_dicts()
+        # FileHandler.write_to_a_file(zlota_rybka=list_of_dicts_from_file)
+
+
+    # def load_from_a_file(self):
+    #     path = "./json_data.json"
+    #     check_file = os.path.isfile(path)
+    #     print(check_file)
+    #     if check_file == True:
+    #         print(Buffer.self.data)
+
+
 
     # def decoding_text(self):  # czy to dodajemy do programu To ma niby tekst odkodowac ale chyba musi być jakaś lokalizacja pliku z zapisaem????
     #     """Uncoding text using rot, creating text object Text obj. and adds it to the buffer"""

@@ -1,5 +1,6 @@
 from colorama import Fore
 
+
 class Menu:
     """Class connected to the main menu of the cipher program"""
 
@@ -14,6 +15,6 @@ class Menu:
         print(f"            {Fore.BLUE}1: for text coding")
         print("            2: for text decoding")
         print("            3: for save data to a file")
-        print("            4: for load data from a file")
+        print("            4: for load data from a file")   #tozaprintowac gdyby był bląd metody lądującej
         print("            5: to show the buffer")
         print(f"            6: to end the program!{Fore.WHITE}")

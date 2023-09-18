@@ -25,6 +25,7 @@ class Buffer:
         self.data: list[Text] = []
 
     def add(self, value: Text) -> None:
+        """Method used fo adding values to self data list[Text]"""
         self.data.append(value)
 
     def remove_from_buffer(self, idx: int):
@@ -42,6 +43,7 @@ class Buffer:
             print("idx must be an integer not a string")
 
     def show_buffer(self):
+        """method used to show the data stored in list[Text] obj"""
         print(self.data)
 
     def data_to_list_of_dicts(self):
@@ -59,6 +61,7 @@ class Buffer:
             return list_of_dicts
 
     def exit_the_program(self):
+        """ Method created to exit the program using menu's last position"""
         exit()
 
 
