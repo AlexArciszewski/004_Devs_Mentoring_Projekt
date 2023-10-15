@@ -1,9 +1,8 @@
 """
 Buffer to lista, która istnieje podczas działania programu, Trzyma zaszyfrowane, odszyfrowane
-    wczytane z pliku(to w file_handler, z niego zapisujemy do pliku.
+    wczytane z pliku(to w file_handler, z niego zapisujemy do pliku .
 """
-from src.cipher import Code
-from dataclasses import dataclass, astuple, asdict
+from dataclasses import dataclass, asdict
 
 # import sys
 # from manager import Manager
@@ -60,22 +59,21 @@ class Buffer:
             # print(list_of_dicts)
             return list_of_dicts
 
-    def exit_the_program(self):
-        """Method created to exit the program using menu's last position"""
-        exit()
-
 
 def main():
     buffer = Buffer()
     text_zzz = Text("aaa", True, "1")
     text_kkk = Text("bbb", True, "2")
+    text_fff = Text("ccc", True, "3")
     # asdict(text_zzz)
     buffer.add(text_zzz)
     buffer.add(text_kkk)
+    buffer.add(text_fff)
     # print(buffer)
-    # buffer.show_buffer()
+    buffer.show_buffer()
     buffer.data_to_list_of_dicts()
     print(buffer.data_to_list_of_dicts())
+    # print(text_zzz)
 
 
 if __name__ == "__main__":
